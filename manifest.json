@@ -1,0 +1,39 @@
+{
+  "name": "New Tab for Android",
+  "version": "1.0.6",
+  "description": "Adds the New Tab button to the URL bar",
+
+  "manifest_version": 2,
+  "applications": {
+    "gecko": {
+      "id": "new-tab@toolbar.org",
+      "strict_min_version": "54.0"
+    }
+  },
+
+  "page_action": {
+    "default_title": "New Tab",
+    "default_icon": {
+      "19": "button-new-19.png",
+      "38": "button-new-38.png"
+    }
+  },
+
+  "background": {
+    "scripts": ["utils.js", "main-new-tab.js"]
+  },
+  
+  "options_ui": {
+    "page": "options/options.html",
+    "browser_style": true
+  },
+  
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "<all_urls>",
+    "notifications",
+    "storage"
+  ]
+
+}
